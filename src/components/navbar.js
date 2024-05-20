@@ -17,7 +17,7 @@ export default function Navbar() {
     { title: "Become a Bee", path: "" },
     { title: "Lesson Plans", path: "" },
     { title: "Testimonials", path: "" },
-    { title: "FAQ", path: "" },
+    { title: "FAQ", path: "/faq" },
   ];
 
   const sidebarVariants = {
@@ -26,11 +26,11 @@ export default function Navbar() {
   };
 
   return (
-    <div className="flex items-center justify-between w-full h-14 sticky top-0 z-50 text-yellow-150 bg-blue-150 bg-opacity-60 backdrop-filter backdrop-blur-lg">
+    <div className="flex items-center justify-between w-full h-14 sticky top-0 z-50 text-yellow-150 bg-blue-150 backdrop-filter backdrop-blur-lg">
       <div className='items-center justify-between w-full h-14 hidden md:flex'>
         
         <div className="flex items-center justify-center space-x-6 ml-4">
-        <Link href = '/home'>
+        <Link href = '/home' className='transition duration-300 ease-in-out hover:scale-110 hover:cursor-pointer'>
             <Image src={Logo} alt="TutorHive Logo" width={128} height={32} />
         </Link>
         
