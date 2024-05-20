@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Fade as Hamburger } from 'hamburger-react';
+import Image from 'next/image';
+import Link from 'next/link';
+import Logo from '../assets/logo.png';
 
 export default function Navbar() {
   const [isOpen, setOpen] = useState(false);
@@ -10,8 +13,11 @@ export default function Navbar() {
   };
 
   const navLinks = [
-    { title: "" },
-
+    { title: "Why TutorHive?", path: "" },
+    { title: "Become a Bee", path: "" },
+    { title: "Lesson Plans", path: "" },
+    { title: "Testimonials", path: "" },
+    { title: "FAQ", path: "" },
   ];
 
   const sidebarVariants = {
@@ -20,15 +26,18 @@ export default function Navbar() {
   };
 
   return (
-    <div className="flex items-center justify-between w-full h-14 sticky top-0 z-50 text-black bg-white bg-opacity-60 backdrop-filter backdrop-blur-lg">
+    <div className="flex items-center justify-between w-full h-14 sticky top-0 z-50 text-yellow-150 bg-blue-150 bg-opacity-60 backdrop-filter backdrop-blur-lg">
       <div className='items-center justify-between w-full h-14 hidden md:flex'>
         
         <div className="flex items-center justify-center space-x-6 ml-4">
-        <p> Logo </p>
+        <Link href = '/home'>
+            <Image src={Logo} alt="TutorHive Logo" width={128} height={32} />
+        </Link>
+        
           {navLinks.map((link) => (
-            <button key={link.title} className="">
+            <Link key={link.title} href = {link.path} className="font-bold transition duration-300 ease-in-out hover:text-white">
               {link.title}
-            </button>
+            </Link>
           ))}
         </div>
         <div className='mr-4 flex items-center justify-center space-x-3'>
@@ -38,7 +47,9 @@ export default function Navbar() {
 
       <div className='flex items-center justify-between w-full h-14 md:hidden'>
 
-        <p className='ml-4'> Logo </p>
+        <Link href = '/home' className='pl-2'>
+            <Image src={Logo} alt="TutorHive Logo" width={128} height={32} />
+        </Link>
         {/* Mobile NavBar Icon */}
         <Hamburger rounded size={24} duration={0.4} distance='lg' hideOutline={false} onToggle={toggleMenu} />
         <AnimatePresence>
@@ -49,7 +60,7 @@ export default function Navbar() {
               exit="closed"
               variants={sidebarVariants}
               transition={{ duration: 0.4 }}
-              className="z-20 pt-12 pb-28 absolute top-full right-0 h-screen w-1/3 bg-white flex flex-col justify-between"
+              className="z-20 pt-12 pb-28 absolute top-full right-0 h-screen w-screen bg-blue-150  bg-opacity-20 flex flex-col justify-between"
             >
               {/* Website Section Links */}
               <div className='flex flex-col space-y-6'>
