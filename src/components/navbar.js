@@ -60,14 +60,16 @@ export default function Navbar() {
               exit="closed"
               variants={sidebarVariants}
               transition={{ duration: 0.4 }}
-              className="z-20 pt-12 pb-28 absolute top-full right-0 h-screen w-screen bg-blue-150  bg-opacity-20 flex flex-col justify-between"
+              className="z-20 pt-12 pb-28 absolute top-full right-0 h-screen w-screen bg-blue-150  bg-opacity-100 flex flex-col justify-between"
             >
               {/* Website Section Links */}
-              <div className='flex flex-col space-y-6'>
+              <div className='flex flex-col space-y-6 items-center justify-center'>
                 {navLinks.map((link) => (
-                  <button key={link.title} className="">
-                    {link.title}
-                  </button>
+                  <a href={link.path} className="">
+                    <button key={link.title} className="">
+                      {link.title}
+                    </button>
+                  </a>
                 ))}
               </div>
 

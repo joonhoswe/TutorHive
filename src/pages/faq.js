@@ -7,6 +7,8 @@ export default function Faq() {
     const questions = [
         { question: 'What is TutorHive?', answer: 'TutorHive is the first learning platform that rewards you for learning and retaining information!' },
         { question: 'How does TutorHive work?', answer: 'TutorHive uses a game-like level system and rewards you with prizes for completing lessons and quizzes.' },
+        { question: 'What is the cost for me as a student?', answer: 'TutorHive\'s tutoring services start at $50/hour!' },
+        { question: 'How can I apply to be a tutor?', answer: 'Check the "Become a Bee" tap in our menu to get started!' }
     ];
 
     return (
