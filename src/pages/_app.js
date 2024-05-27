@@ -18,8 +18,8 @@ export default function MyApp({ Component, pageProps }) {
 
     return (
         <Auth0Provider
-        domain="tutorhive.us.auth0.com"
-        clientId="Rq4riJNwqc0mjXKOQxbodDfv1S1oi0hd"
+        domain = {process.env.NEXT_PUBLIC_AUTH0_DOMAIN}
+        clientId = {process.env.NEXT_PUBLIC_AUTH0_CLIENTID}
         authorizationParams={{
             redirect_uri: redirectUri,
         }}
