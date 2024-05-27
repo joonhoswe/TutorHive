@@ -34,7 +34,7 @@ export default function Navbar() {
     <div className="flex items-center justify-between w-full h-14 sticky top-0 z-50 text-yellow-150 bg-blue-150 backdrop-filter backdrop-blur-lg">
       <div className='items-center justify-between w-full h-14 px-4 hidden md:flex'>
         
-        <div className="flex items-center justify-center space-x-6 ml-4">
+        <div className="flex items-center justify-center space-x-6">
         <Link href = '/home' className='transition duration-300 ease-in-out hover:scale-110 hover:cursor-pointer'>
             <Image src={Logo} alt="TutorHive Logo" width={128} height={32} />
         </Link>
