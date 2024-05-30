@@ -18,7 +18,7 @@ export default function Navbar() {
   };
 
   const navLinks = [
-    { title: "Why TutorHive?", path: "" },
+    { title: "About", path: "/about" },
     { title: "Become a Bee", path: "" },
     { title: "Lesson Plans", path: "" },
     { title: "Testimonials", path: "" },
