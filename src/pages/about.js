@@ -8,7 +8,7 @@ export default function About() {
         <h1 className="text-xl">
           TutorHive's founders themselves are lifelong students just like you 
           who needed quality tutoring at an affordable rate. Leading market 
-          options were overpriced 
+          options were overpriced, so
         </h1>
       </div>
     </div>
